@@ -14,7 +14,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/1200x/e3/3a/5a/e33a5a8f6fa9222aa6cf8e76235e0000.jpg"
   },
 
   {
@@ -28,7 +28,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS902rPiwv2J9VYLw2OLp89_2apBEU7qRuMWpMPZDP16yuaNB_8ftPOGbrp&s=10"
   },
 
   {
@@ -42,7 +42,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/236x/a5/1e/9a/a51e9ae102cb13a9f4980398af82d2d6.jpg"
   },
 
   {
@@ -56,7 +56,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/236x/fa/3b/c8/fa3bc8369d7123174fb331b13096a2d1.jpg"
   },
 
   {
@@ -70,7 +70,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/736x/76/31/25/763125b40635d0cec6c12eb9d0e55271.jpg"
   },
 
   {
@@ -84,7 +84,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/236x/90/f3/28/90f3281956d774d19f9ea9c193c8c453.jpg?nii=t"
   },
 
   {
@@ -96,9 +96,9 @@ const misBeats = [
     precioPro: "$11 USD ($200 MXN)",
     archivo: "audios/t4.mp3",
     vendido: false,
-    tipo: "",
+    tipo: "finales",
     estado: "si",
-    img: ""
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9-3SV221zmIyFD2ibmUQpN1mh1IcpZCPcpjMokQ8htRUmg1G7NSrnTI8&s=10"
   },
 
   {
@@ -112,7 +112,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxaK19ir8n-OrkxtdjgOwZP-4rJNQHoyj84ggEPkzQDsgY1OLZW2xpzZRc&s=10"
   },
 
   {
@@ -126,7 +126,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/236x/69/3a/27/693a27d33dc28e8b249b22dd7b7bd779.jpg"
   },
 
   {
@@ -140,7 +140,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/736x/45/34/22/45342224fad62c4cbcd43e28d76cf975.jpg"
   },
 
   {
@@ -154,7 +154,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/736x/22/35/8b/22358b9ac335613e03baf85dc1c47260.jpg"
   },
 
   {
@@ -168,7 +168,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/236x/f6/e9/9b/f6e99b68b9916aac67fbf5a3db19b89d.jpg"
   },
 
   {
@@ -182,21 +182,21 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS43VJp2UZm9yj1O1qhGrYbCXZIJT9D27a7llv6_pCLxipdDNypWjwkBiGv&s=10"
   },
 
   {
     id: 14,
-    titulo: "Traciones Type CrMJ",
+    titulo: "Traiciones Type CrMJ",
     genre: "Reggaeton",
     bpm: 95,
     precioBasico: "$18 USD ($330MXN)",
     precioPro: "$22 USD ($400 MXN)",
     archivo: "audios/r70.mp3",
     vendido: false,
-    tipo: "",
+    tipo: "mejor",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/236x/af/11/d8/af11d899773838780858cb068c48fee4.jpg"
   },
 
   {
@@ -204,13 +204,13 @@ const misBeats = [
     titulo: "Viejos tiempos",
     genre: "Reggaeton",
     bpm: 86,
-    precioBasico: "$18 USD ($330MXN)",
-    precioPro: "$22 USD ($400 MXN)",
+    precioBasico: "$16 USD ($290MXN)",
+    precioPro: "$27 USD ($490 MXN)",
     archivo: "audios/r88.mp3",
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i1.sndcdn.com/artworks-000547503816-z0ksd8-t500x500.jpg"
   },
 
   {
@@ -224,7 +224,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/564x/e9/ae/22/e9ae22eb214b01c2559e3aa803d44781.jpg"
   },
 
   {
@@ -238,7 +238,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://billboard.com.co/wp-content/uploads/2025/09/DUOS-REGGAETON.png"
   },
 
   {
@@ -250,9 +250,9 @@ const misBeats = [
     precioPro: "$28 USD ($520 MXN)",
     archivo: "audios/r45cat.mp3",
     vendido: false,
-    tipo: "",
+    tipo: "mejor",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/736x/0a/33/89/0a33894c7eaf49b08fb4b76b11274ff6.jpg"
   },
 
   {
@@ -266,7 +266,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIXrdLEgWWl0MPiyB1d8bZPVQO1E_JnxqZwTZPJpGglTMZ-KdhPOWbuNmW&s=10"
   },
 
   {
@@ -280,7 +280,7 @@ const misBeats = [
     vendido: false,
     tipo: "",
     estado: "si",
-    img: ""
+    img: "https://www.toptrendsguide.com/wp-content/uploads/2022/08/Hottest-Instagram-Models.jpg"
   },
 
   {
@@ -292,9 +292,9 @@ const misBeats = [
     precioPro: "$12 USD ($240 MXN)",
     archivo: "audios/r94.mp3",
     vendido: false,
-    tipo: "mejor",
+    tipo: "",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/236x/37/67/98/376798292160887467d2ab30f4644b96.jpg"
   },
 
   {
@@ -306,9 +306,9 @@ const misBeats = [
     precioPro: "$17 USD ($320 MXN)",
     archivo: "audios/r95.mp3",
     vendido: false,
-    tipo: "finales",
+    tipo: "mejor",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/236x/ee/9e/41/ee9e412d4c6150422743d9cfbc080da0.jpg"
   },
 
   {
@@ -322,7 +322,55 @@ const misBeats = [
     vendido: false,
     tipo: "reciente",
     estado: "si",
-    img: ""
+    img: "https://i.pinimg.com/originals/51/17/2d/51172d35896202663a8cf24b786fdddc.jpg"
   }
+,
+
+  {
+    id: 24,
+    titulo: "Tu número",
+    genre: "Reggaeton",
+    bpm: 96,
+    precioBasico: "$10 USD ( $190MXN )",
+    precioPro: "$12 USD ($240 MXN)",
+    archivo: "audios/r97.mp3",
+    vendido: false,
+    tipo: "",
+    estado: "si",
+    img: "https://i.pinimg.com/236x/09/93/c2/0993c2e1cabf78fa67d2e79a8b272efb.jpg"
+  }
+,
+
+  {
+    id: 25,
+    titulo: "Tu rostro",
+    genre: "Reggaeton",
+    bpm: 92,
+    precioBasico: "$11 USD ( $210MXN )",
+    precioPro: "$15 USD ($290 MXN)",
+    archivo: "audios/r98.mp3",
+    vendido: false,
+    tipo: "",
+    estado: "si",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFbXkm7s_hj6fH135XGn15VCmaP4JhrtfiuqdBirAuFkrSVFQk1Tmo4P2N&s=10"
+  }
+
+  ,
+
+  {
+    id: 26,
+    titulo: "Piel a Piel",
+    genre: "Reggaeton",
+    bpm: 85,
+    precioBasico: "$13 USD ( $260MXN )",
+    precioPro: "$17 USD ($320 MXN)",
+    archivo: "audios/r99.mp3",
+    vendido: false,
+    tipo: "reciente",
+    estado: "si",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZNqbvgKTfdJH23D1qAKMNW9l3g2vgyeD-XjtQQvYPXzYgMwRKireQMO9V&s=10"
+  }
+
+  
 
 ];
