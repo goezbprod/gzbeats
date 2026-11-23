@@ -1,0 +1,2053 @@
+
+/* =========================================
+   FUENTE EXCLUSIVA DE BEATS
+========================================= */
+
+@font-face {
+  font-family: "StaatlichesDisplay";
+
+  src: url("../fonts/Staatliches-Regular.ttf") format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
+
+  font-display: swap;
+}
+
+
+/* =========================================
+   COLORES DE LA PÁGINA
+========================================= */
+
+:root {
+
+  --beats-bg-light: #f3f2f9;
+
+  --beats-bg-dark: #0d0d0d;
+
+  --beats-text: #3d474f;
+
+  --beats-white: #fff5f7;
+
+  --beats-pink: #f8004f;
+
+  --beats-blue-glow: rgba(91, 160, 255, 0.48);
+
+  --beats-pink-glow: rgba(255, 116, 160, 0.40);
+
+}
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+.beats-page {
+
+  background-color: var(--beats-bg-dark);
+
+  color: var(--beats-white);
+
+  overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   BARRA DE NAVEGACIÓN
+========================================= */
+
+.beats-topbar {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  width: 100%;
+  height: 125px;
+
+  padding: 0 4%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: transparent;
+
+}
+
+
+.beats-brand {
+
+  display: flex;
+
+  align-items: center;
+
+  text-decoration: none;
+
+}
+
+
+.beats-logo {
+
+  display: block;
+
+  height: 77px;
+
+  width: auto;
+
+  transition: filter 0.3s ease;
+
+}
+
+
+/* Navegación */
+
+.beats-nav {
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5vw;
+
+  white-space: nowrap;
+
+}
+
+
+.beats-nav-link {
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1.25rem, 1.8vw, 2rem);
+
+  color: var(--beats-text);
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+
+}
+
+
+.beats-nav-link:hover {
+
+  opacity: 0.7;
+
+}
+
+
+/* =========================================
+   MODO OSCURO DE LA BARRA
+========================================= */
+
+.beats-topbar.is-dark .beats-nav-link {
+
+  color: var(--beats-white);
+
+}
+
+
+.beats-topbar.is-dark .beats-logo {
+
+  filter: brightness(0) invert(1);
+
+}
+
+
+/* =========================================
+   PORTADA CLARA DE BEATS
+========================================= */
+
+.beats-intro {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+  height: 100svh;
+
+  min-height: 680px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background-color: var(--beats-bg-light);
+
+}
+
+
+/* =========================================
+   ILUMINACIÓN AZUL Y ROSA
+========================================= */
+
+.beats-glow {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(
+      ellipse 28% 44% at 42% 77%,
+      var(--beats-blue-glow) 0%,
+      rgba(91, 160, 255, 0.20) 42%,
+      transparent 75%
+    ),
+
+    radial-gradient(
+      ellipse 27% 42% at 66% 76%,
+      var(--beats-pink-glow) 0%,
+      rgba(255, 116, 160, 0.15) 42%,
+      transparent 75%
+    );
+
+}
+
+
+/* =========================================
+   TÍTULO EXPLORA
+========================================= */
+
+.beats-main-title {
+
+  position: absolute;
+
+  top: 16%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 1;
+
+  width: 100%;
+
+  margin: 0;
+
+  text-align: center;
+
+  font-family: "StaatlichesDisplay", sans-serif;
+
+  font-size: clamp(11rem, 18vw, 22rem);
+
+  font-weight: normal;
+
+  line-height: 0.78;
+
+  letter-spacing: 0;
+
+  color: var(--beats-text);
+
+  white-space: nowrap;
+
+  user-select: none;
+
+}
+
+
+/* =========================================
+   ETIQUETAS BEATS / LICENCIAS
+========================================= */
+
+.beats-labels {
+
+  position: absolute;
+
+  top: 43%;
+
+  left: 0;
+  right: 0;
+
+  z-index: 2;
+
+  padding: 0 20.3% 0 20.3%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  pointer-events: none;
+
+}
+
+
+.beats-label {
+
+  display: block;
+
+  font-family: "StaatlichesDisplay", sans-serif;
+
+  font-size: clamp(2.5rem, 3.2vw, 4.2rem);
+
+  line-height: 1;
+
+  color: var(--beats-text);
+
+  white-space: nowrap;
+
+}
+
+
+/* =========================================
+   PERSONA / ART3.PNG
+========================================= */
+
+.beats-character {
+
+  position: absolute;
+
+  left: 46%;
+
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  height: 74vh;
+  height: 74svh;
+
+  max-height: 800px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-end;
+
+  pointer-events: none;
+
+}
+
+
+.beats-character-img {
+
+  display: block;
+
+  height: 100%;
+
+  width: auto;
+
+  max-width: 90vw;
+
+  object-fit: contain;
+
+  object-position: center bottom;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+}
+
+
+/* =========================================
+   SECCIÓN OSCURA DEL CATÁLOGO
+========================================= */
+
+.beats-catalog {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 110px 6% 80px;
+
+  background-color: var(--beats-bg-dark);
+
+  color: var(--beats-white);
+
+}
+
+
+.catalog-heading {
+
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+
+}
+
+
+.catalog-overline {
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 1rem;
+
+  letter-spacing: 3px;
+
+  color: var(--beats-pink);
+
+  margin-bottom: 12px;
+
+}
+
+
+.catalog-heading h2 {
+
+  font-family: "StaatlichesDisplay", sans-serif;
+
+  font-size: clamp(3.5rem, 7vw, 7rem);
+
+  font-weight: normal;
+
+  line-height: 0.95;
+
+  color: var(--beats-white);
+
+}
+
+
+.catalog-description {
+
+  margin-top: 15px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+
+  color: rgba(255, 245, 247, 0.72);
+
+}
+
+
+/* Espacio preparado para las tarjetas */
+
+.beats-grid {
+
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+}
+
+
+/* =========================================
+   TABLETAS
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .beats-topbar {
+
+    height: 210px;
+
+  }
+
+  .beats-logo {
+
+    height: 46px;
+
+  }
+
+  .beats-nav {
+
+    gap: 3vw;
+
+  }
+
+  .beats-main-title {
+
+    font-size: clamp(10rem, 20vw, 16rem);
+
+  }
+
+  .beats-labels {
+
+    padding-left: 15%;
+    padding-right: 13%;
+
+  }
+
+  .beats-character {
+
+    height: 72svh;
+
+  }
+
+}
+
+
+/* =========================================
+   MÓVILES
+========================================= */
+
+@media (max-width: 760px) {
+
+  .beats-intro {
+
+    min-height: 700px;
+
+  }
+
+
+  /* Barra */
+
+  .beats-topbar {
+
+    height: 50px;
+
+    padding: 12px 5% 0;
+
+    align-items: flex-start;
+
+  }
+
+  .beats-logo {
+
+    height: 38px;
+
+  }
+
+  .beats-nav {
+
+    top: auto;
+
+    bottom: 9px;
+
+    left: 55%;
+
+    transform: translateX(-50%);
+
+    width: max-content;
+
+    max-width: 96%;
+
+    gap: clamp(30px, 3vw, 22px);
+
+  }
+
+  .beats-nav-link {
+
+    font-size: clamp(1rem, 2.8vw, 0.95rem);
+
+  }
+
+
+  /* Título */
+
+  .beats-main-title {
+
+    top: 15%;
+
+    font-size: clamp(8rem, 27vw, 13rem);
+
+    line-height: 0.8;
+
+  }
+
+
+  /* Etiquetas */
+
+  .beats-labels {
+
+    top: 32%;
+
+    padding: 0 7%;
+
+  }
+
+  .beats-label {
+
+    font-size: clamp(2rem, 7vw, 3rem);
+
+  }
+
+
+  /* Personaje centrado */
+
+  .beats-character {
+
+    height: 95svh;
+
+    max-height: 430px;
+
+  }
+
+  .beats-character-img {
+
+    max-width: 170vw;
+
+  }
+
+
+  /* Catálogo */
+
+  .beats-catalog {
+
+    padding: 100px 5% 60px;
+
+  }
+
+  .catalog-heading {
+
+    margin-bottom: 35px;
+
+  }
+
+  .catalog-heading h2 {
+
+    font-size: clamp(3rem, 11vw, 4.5rem);
+
+  }
+
+}
+
+
+/* =========================================
+   MÓVILES PEQUEÑOS
+========================================= */
+
+@media (max-width: 380px) {
+
+  .beats-labels {
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+  }
+
+  .beats-label {
+
+    font-size: 1.8rem;
+
+  }
+
+}
+
+
+
+
+/* =========================================
+   LUZ SUPERIOR DEL CATÁLOGO
+========================================= */
+
+.beats-catalog {
+
+  background-color: var(--beats-bg-dark);
+
+  background-image:
+
+    radial-gradient(
+      ellipse 80% 280px at 50% 0%,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.055) 38%,
+      transparent 75%
+    );
+
+}
+
+
+/* =========================================
+   ENCABEZADO Y CONTROLES
+========================================= */
+
+.catalog-heading {
+  position: relative;
+  z-index: 2;
+}
+
+
+.catalog-toolbar {
+
+  position: relative;
+  z-index: 10;
+
+  max-width: 1500px;
+
+  margin: 0 auto 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+}
+
+
+.filter-wrapper {
+  position: relative;
+}
+
+
+.filter-controls {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+
+/* Botón filtrar */
+
+.btn-filter {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 12px 20px;
+
+  border: 1px solid rgba(255,255,255,0.19);
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.07);
+
+  color: var(--beats-white);
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+
+}
+
+
+.btn-filter:hover,
+.btn-filter.is-filtered {
+
+  background: rgba(255,255,255,0.14);
+
+  border-color: var(--beats-pink);
+
+}
+
+
+.btn-filter img,
+.btn-reset-filter img {
+
+  width: 21px;
+  height: 21px;
+
+  object-fit: contain;
+
+}
+
+
+.filter-arrow {
+  color: var(--beats-pink);
+  font-size: 1.2rem;
+}
+
+
+/* Botón limpiar */
+
+.btn-reset-filter {
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.07);
+
+  cursor: pointer;
+
+  transition: background 0.25s ease;
+
+}
+
+
+.btn-reset-filter:hover {
+  background: rgba(248,0,79,0.22);
+}
+
+
+/* =========================================
+   DESPLEGABLE DE FILTROS
+========================================= */
+
+.filter-dropdown {
+
+  position: absolute;
+
+  top: calc(100% + 12px);
+
+  left: 0;
+
+  z-index: 30;
+
+  width: 270px;
+
+  padding: 22px;
+
+  border: 1px solid rgba(255,255,255,0.13);
+
+  border-radius: 16px;
+
+  background: #191919;
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.55);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+
+}
+
+
+.filter-dropdown.active {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+
+}
+
+
+.filter-dropdown h3 {
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.9rem;
+
+  color: var(--beats-pink);
+
+  margin-bottom: 18px;
+
+}
+
+
+.checkbox-group {
+
+  display: grid;
+
+  gap: 14px;
+
+}
+
+
+.checkbox-label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.95rem;
+
+  color: var(--beats-white);
+
+  cursor: pointer;
+
+}
+
+
+.genre-checkbox {
+
+  width: 17px;
+  height: 17px;
+
+  accent-color: var(--beats-pink);
+
+  cursor: pointer;
+
+}
+
+
+.btn-apply-filter {
+
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 12px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: var(--beats-pink);
+
+  color: white;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+
+.catalog-results {
+
+  color: rgba(255,255,255,0.55);
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.9rem;
+
+}
+
+
+/* =========================================
+   GRID DE TARJETAS - ESCRITORIO
+========================================= */
+
+.beats-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: stretch;
+
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+}
+
+
+/* =========================================
+   TARJETA PRINCIPAL
+========================================= */
+
+.beat-card {
+
+  --beat-glow: rgba(255,255,255,0.10);
+
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border: 1px solid rgba(255,255,255,0.10);
+
+  border-radius: 18px;
+
+  background: #181818;
+
+  box-shadow:
+
+    0 8px 20px rgba(0,0,0,0.35),
+
+    inset 0 1px 1px rgba(255,255,255,0.09);
+
+  transition:
+
+    transform 0.3s ease,
+
+    box-shadow 0.3s ease,
+
+    border-color 0.3s ease;
+
+}
+
+
+/* Fondo con la misma portada, desenfocada */
+
+.beat-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: -25px;
+
+  z-index: -2;
+
+  background-image: var(--beat-cover-bg);
+
+  background-size: cover;
+
+  background-position: center;
+
+  filter: blur(28px) brightness(0.20) saturate(0.65);
+
+  opacity: 0.60;
+
+  transform: scale(1.12);
+
+}
+
+
+/* Capa de oscurecimiento */
+
+.beat-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.07) 0%,
+      rgba(20,20,20,0.40) 35%,
+      rgba(12,12,12,0.90) 100%
+    );
+
+}
+
+
+.beat-card:hover {
+
+  transform: translateY(-7px) scale(1.018);
+
+  border-color: rgba(255,255,255,0.28);
+
+  box-shadow:
+
+    0 18px 38px rgba(0,0,0,0.45),
+
+    0 0 25px var(--beat-glow),
+
+    inset 0 1px 1px rgba(255,255,255,0.12);
+
+}
+
+
+/* Tarjeta reciente */
+
+.beat-card.is-recent {
+
+  --beat-glow: rgba(248,0,79,0.23);
+
+  border-color: rgba(248,0,79,0.24);
+
+}
+
+
+/* Tarjeta seleccionada */
+
+.beat-card.is-selected {
+
+  --beat-glow: rgba(40,155,255,0.26);
+
+  border-color: rgba(40,155,255,0.30);
+
+}
+
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.beat-card-visual {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 165px;
+
+  overflow: hidden;
+
+  background: #242424;
+
+}
+
+
+.beat-card-cover {
+
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.45s ease;
+
+}
+
+
+.beat-card:hover .beat-card-cover {
+
+  transform: scale(1.055);
+
+}
+
+
+/* Icono superior izquierdo */
+
+.beat-icon {
+
+  position: absolute;
+
+  top: 13px;
+  left: 13px;
+
+  z-index: 4;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,0.24);
+
+  border-radius: 11px;
+
+  background: rgba(20,20,20,0.76);
+
+  backdrop-filter: blur(10px);
+
+}
+
+
+.beat-icon img {
+
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+
+}
+
+
+/* =========================================
+   ETIQUETAS DE CLASIFICACIÓN
+========================================= */
+
+.beat-type-badge {
+
+  position: absolute;
+
+  top: 14px;
+  right: 13px;
+
+  z-index: 4;
+
+  padding: 7px 11px;
+
+  border-radius: 30px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.67rem;
+
+  font-weight: bold;
+
+  letter-spacing: 0.6px;
+
+  white-space: nowrap;
+
+  color: white;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+
+}
+
+
+/* Reciente: rosa */
+
+.beat-card.is-recent .beat-type-badge {
+
+  background: linear-gradient(
+    110deg,
+    #f8004f,
+    #ff563f
+  );
+
+}
+
+
+/* Selección: azul */
+
+.beat-card.is-selected .beat-type-badge {
+
+  background: linear-gradient(
+    110deg,
+    #168cff,
+    #56b8ff
+  );
+
+}
+
+
+/* Etiqueta vendido */
+
+.beat-sold-badge {
+
+  position: absolute;
+
+  inset: auto 12px 12px auto;
+
+  z-index: 5;
+
+  padding: 7px 12px;
+
+  border-radius: 30px;
+
+  background: rgba(0,0,0,0.85);
+
+  color: #ff7373;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.75rem;
+
+  font-weight: bold;
+
+}
+
+
+/* =========================================
+   BOTÓN DE REPRODUCCIÓN SOBRE LA PORTADA
+========================================= */
+
+.beat-cover-play {
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%,-50%);
+
+  z-index: 5;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,0.55);
+
+  border-radius: 50%;
+
+  background: rgba(10,10,10,0.75);
+
+  color: white;
+
+  font-size: 1.25rem;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+
+}
+
+
+.beat-cover-play:hover {
+
+  background: var(--beats-pink);
+
+  transform: translate(-50%,-50%) scale(1.12);
+
+}
+
+
+.beat-cover-play:disabled {
+
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+}
+
+
+/* =========================================
+   INFORMACIÓN DE LA TARJETA
+========================================= */
+
+.beat-card-info {
+
+  position: relative;
+
+  z-index: 2;
+
+  padding: 17px;
+
+}
+
+
+.beat-card-heading {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+}
+
+
+.beat-title {
+
+  margin: 0;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 1.65rem;
+
+  line-height: 1.05;
+
+  color: var(--beats-white);
+
+  overflow-wrap: anywhere;
+
+}
+
+
+.beat-genre {
+
+  display: inline-block;
+
+  margin-top: 8px;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: rgba(255,255,255,0.10);
+
+  color: rgba(255,255,255,0.88);
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.76rem;
+
+}
+
+
+.beat-bpm {
+
+  margin-top: 8px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.82rem;
+
+  color: rgba(255,255,255,0.61);
+
+}
+
+
+/* =========================================
+   REPRODUCTOR PERSONALIZADO
+========================================= */
+
+.beat-audio {
+
+  display: none;
+
+}
+
+
+.beat-player {
+
+  margin-top: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+}
+
+
+/* Barra de progreso */
+
+.beat-progress {
+
+  width: 100%;
+
+  min-width: 0;
+
+  height: 5px;
+
+  margin: 0;
+
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.19);
+
+  cursor: pointer;
+
+}
+
+
+.beat-progress::-webkit-slider-thumb {
+
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: var(--beats-pink);
+
+  box-shadow: 0 0 9px rgba(248,0,79,0.5);
+
+}
+
+
+.beat-progress::-moz-range-thumb {
+
+  width: 12px;
+  height: 12px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: var(--beats-pink);
+
+}
+
+
+/* Tiempo */
+
+.beat-time {
+
+  flex-shrink: 0;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.70rem;
+
+  color: rgba(255,255,255,0.68);
+
+  white-space: nowrap;
+
+}
+
+
+/* =========================================
+   PRECIO
+========================================= */
+
+.beat-price-row {
+
+  margin-top: 16px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(255,255,255,0.10);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+}
+
+
+.beat-price-label {
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.72rem;
+
+  color: rgba(255,255,255,0.58);
+
+}
+
+
+.beat-price {
+
+  margin-top: 3px;
+
+  font-family: "StaatlichesDisplay", sans-serif;
+
+  font-size: 1.55rem;
+
+  line-height: 1;
+
+  color: var(--beats-white);
+
+}
+
+
+/* =========================================
+   BOTÓN DE DETALLES
+========================================= */
+
+.beat-details-btn {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 12px;
+
+  border: 1px solid rgba(255,255,255,0.22);
+
+  border-radius: 9px;
+
+  background: rgba(255,255,255,0.08);
+
+  color: var(--beats-white);
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.9rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+
+}
+
+
+.beat-details-btn:hover {
+
+  background: var(--beats-pink);
+
+  border-color: var(--beats-pink);
+
+}
+
+
+/* =========================================
+   MENSAJE SIN RESULTADOS
+========================================= */
+
+.beats-empty {
+
+  grid-column: 1 / -1;
+
+  padding: 70px 15px;
+
+  text-align: center;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  color: rgba(255,255,255,0.65);
+
+}
+
+
+/* =========================================
+   VENTANA DE DETALLES PROVISIONAL
+========================================= */
+
+.beat-details-dialog {
+
+  width: min(520px, 92vw);
+
+  max-height: 85vh;
+
+  margin: auto;
+
+  padding: 0;
+
+  border: 1px solid rgba(255,255,255,0.16);
+
+  border-radius: 20px;
+
+  background: #191919;
+
+  color: white;
+
+  box-shadow: 0 25px 80px rgba(0,0,0,0.65);
+
+}
+
+
+.beat-details-dialog::backdrop {
+
+  background: rgba(0,0,0,0.78);
+
+  backdrop-filter: blur(7px);
+
+}
+
+
+.beat-dialog-content {
+
+  position: relative;
+
+  padding: 35px;
+
+}
+
+
+.beat-dialog-close {
+
+  position: absolute;
+
+  top: 15px;
+  right: 18px;
+
+  width: 35px;
+  height: 35px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.1);
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+}
+
+
+.dialog-overline {
+
+  color: var(--beats-pink);
+
+  font-size: 0.8rem;
+
+  letter-spacing: 2px;
+
+}
+
+
+.beat-dialog-content h2 {
+
+  margin-top: 15px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 2.8rem;
+
+}
+
+
+#dialog-beat-meta {
+
+  color: rgba(255,255,255,0.65);
+
+}
+
+
+.dialog-prices {
+
+  margin-top: 25px;
+
+  display: grid;
+
+  gap: 12px;
+
+  grid-template-columns: 1fr 1fr;
+
+}
+
+
+.dialog-prices > div {
+
+  padding: 15px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.05);
+
+}
+
+
+.dialog-prices span {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.72rem;
+
+  color: rgba(255,255,255,0.58);
+
+}
+
+
+.dialog-prices strong {
+
+  font-family: "StaatlichesDisplay", sans-serif;
+
+  font-size: 1.4rem;
+
+  overflow-wrap: anywhere;
+
+}
+
+
+.dialog-placeholder {
+
+  margin-top: 22px;
+
+  color: rgba(255,255,255,0.60);
+
+  font-size: 0.88rem;
+
+}
+
+
+/* =========================================
+   TABLETAS
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .beats-grid {
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .beats-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+  }
+
+}
+
+
+/* =========================================
+   MÓVILES: TARJETAS HORIZONTALES
+========================================= */
+
+@media (max-width: 600px) {
+
+  .catalog-toolbar {
+
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+
+  }
+
+  .catalog-results {
+
+    font-size: 0.75rem;
+
+    padding-top: 12px;
+
+  }
+
+
+  .beats-grid {
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 15px;
+
+  }
+
+
+  .beat-card {
+
+    display: grid;
+
+    grid-template-columns: 35% minmax(0,1fr);
+
+    min-height: 160px;
+
+    border-radius: 14px;
+
+  }
+
+
+  .beat-card-visual {
+
+    height: 100%;
+
+    min-height: 160px;
+
+  }
+
+
+  .beat-card-cover {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+  }
+
+
+  .beat-icon {
+
+    top: 8px;
+    left: 8px;
+
+    width: 33px;
+    height: 33px;
+
+  }
+
+
+  .beat-icon img {
+
+    width: 18px;
+    height: 18px;
+
+  }
+
+
+  .beat-type-badge {
+
+    top: 9px;
+    right: 7px;
+
+    padding: 5px 7px;
+
+    font-size: 0.55rem;
+
+    max-width: calc(100% - 48px);
+
+  }
+
+
+  .beat-cover-play {
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 1rem;
+
+  }
+
+
+  .beat-card-info {
+
+    min-width: 0;
+
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+  }
+
+
+  .beat-title {
+
+    font-size: 1.35rem;
+
+  }
+
+
+  .beat-genre {
+
+    margin-top: 5px;
+
+    font-size: 0.68rem;
+
+    padding: 4px 6px;
+
+  }
+
+
+  .beat-bpm {
+
+    margin-top: 5px;
+
+    font-size: 0.73rem;
+
+  }
+
+
+  .beat-player {
+
+    gap: 7px;
+
+    margin-top: 11px;
+
+  }
+
+
+  .beat-time {
+
+    font-size: 0.64rem;
+
+  }
+
+
+  .beat-price-row {
+
+    padding-top: 8px;
+
+    margin-top: 9px;
+
+  }
+
+
+  .beat-price-label {
+
+    font-size: 0.62rem;
+
+  }
+
+
+  .beat-price {
+
+    font-size: 1.2rem;
+
+  }
+
+
+  .beat-details-btn {
+
+    padding: 9px 5px;
+
+    margin-top: 9px;
+
+    font-size: 0.76rem;
+
+  }
+
+
+  .filter-dropdown {
+
+    width: min(270px, 88vw);
+
+  }
+
+
+  .beat-dialog-content {
+
+    padding: 25px 18px;
+
+  }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .beat-card,
+  .beat-card-cover,
+  .beat-details-btn,
+  .beat-cover-play {
+
+    transition: none;
+
+  }
+
+}

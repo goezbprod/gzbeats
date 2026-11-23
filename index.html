@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="theme-color" content="#0d0d0d" />
+
+  <title>GOEZ PRODUCER</title>
+
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="css/base.css" />
+
+  <!-- Portada principal -->
+  <link rel="stylesheet" href="css/hero.css" />
+
+  <!-- Barra adaptable -->
+  <link rel="stylesheet" href="css/header-theme.css" />
+
+  <!-- Segunda sección -->
+  <link rel="stylesheet" href="css/home-feature.css" />
+
+</head>
+
+<body>
+
+  <!-- ==================================
+       BARRA DE NAVEGACIÓN GLOBAL
+  =================================== -->
+
+  <header class="topbar" id="main-header">
+
+    <a href="index.html"
+       class="brand-link"
+       aria-label="Inicio">
+
+      <img
+        src="assets/logo1.png"
+        alt="Logo Goez"
+        class="brand-logo glow-white"
+      />
+
+    </a>
+
+    <nav class="nav-menu" aria-label="Navegación principal">
+
+      <a href="beats.html" class="nav-item glow-white">
+        Beats
+      </a>
+
+      <a href="soundpacks.html" class="nav-item glow-white">
+        SoundPacks
+      </a>
+
+      <a href="comprar.html" class="nav-item glow-white">
+        Comprar
+      </a>
+
+      <a href="contacto.html" class="nav-item glow-white">
+        Contacto
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- ==================================
+         SECCIÓN 1: PORTADA OSCURA
+    =================================== -->
+
+    <section class="hero-stage" id="inicio">
+
+      <!-- Fondo -->
+      <div class="hero-wall" aria-hidden="true"></div>
+
+      <div class="hero-light-right" aria-hidden="true"></div>
+
+      <!-- Piso -->
+      <div class="hero-floor-line" aria-hidden="true"></div>
+
+      <div class="hero-floor" aria-hidden="true"></div>
+
+      <!-- Contenido -->
+      <div class="hero-content">
+
+        <div class="hero-copy">
+
+          <h1 class="hero-title glow-white">
+            GOEZ
+          </h1>
+
+          <p class="hero-subtitle glow-accent">
+            PRODUCER
+          </p>
+
+          <p class="hero-caption glow-white">
+            Contenido para artistas y redes sociales
+          </p>
+
+        </div>
+
+        <!-- Imagen original -->
+        <div class="hero-art-wrap">
+
+          <img
+            src="assets/art.png"
+            alt="Goez sentado en un cubo"
+            class="hero-art"
+          />
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================
+         SECCIÓN 2: PRESENTACIÓN DE BEATS
+    =================================== -->
+
+    <section class="beat-promo" id="beat-promo">
+
+      <div class="beat-promo-inner">
+
+        <!-- Texto promocional -->
+        <div class="promo-content">
+
+
+
+          <h2 class="promo-title">
+
+            <span>ENCUENTRA</span>
+
+            <span>
+              TU <em>SONIDO</em>
+            </span>
+
+          </h2>
+
+
+          <p class="promo-description">
+            Beats originales para llevar tus ideas más lejos.
+          </p>
+
+
+          <a href="beats.html" class="promo-button">
+
+            <span>EXPLORAR BEATS</span>
+
+            <span class="promo-arrow" aria-hidden="true">
+              →
+            </span>
+
+          </a>
+
+
+          <!-- Onda sonora decorativa -->
+          <div class="promo-wave" aria-hidden="true">
+
+            <svg
+              viewBox="0 0 600 100"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+            >
+
+              <path
+                d="
+                  M0 50
+                  L12 50 L20 50 L28 50
+                  L38 45 L44 55
+                  L54 35 L60 65
+                  L70 25 L76 75
+                  L86 12 L92 88
+                  L102 5 L108 95
+                  L118 25 L124 75
+                  L134 37 L140 63
+                  L150 20 L156 80
+                  L166 39 L172 61
+                  L182 12 L188 88
+                  L198 28 L204 72
+                  L214 40 L220 60
+                  L230 5 L236 95
+                  L246 32 L252 68
+                  L262 20 L268 80
+                  L278 38 L284 62
+                  L294 15 L300 85
+                  L310 30 L316 70
+                  L326 42 L332 58
+                  L342 8 L348 92
+                  L358 18 L364 82
+                  L374 4 L380 96
+                  L390 25 L396 75
+                  L406 38 L412 62
+                  L422 12 L428 88
+                  L438 30 L444 70
+                  L454 42 L460 58
+                  L470 15 L476 85
+                  L486 35 L492 65
+                  L502 10 L508 90
+                  L518 28 L524 72
+                  L534 40 L540 60
+                  L550 18 L556 82
+                  L566 42 L572 58
+                  L582 50 L600 50
+                "
+                fill="none"
+                stroke="#f8004f"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                opacity="0.28"
+              />
+
+            </svg>
+
+          </div>
+
+        </div>
+
+
+        <!-- Imagen art2.png -->
+        <figure class="promo-art">
+
+          <img
+            src="assets/art2.png"
+            alt="Retrato de Goez"
+            loading="lazy"
+          />
+
+        </figure>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- Cambio automático de colores del encabezado -->
+  <script src="js/header-theme.js"></script>
+
+</body>
+
+</html>

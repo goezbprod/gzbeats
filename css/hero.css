@@ -1,0 +1,465 @@
+
+/* =========================================
+   ESCENARIO PRINCIPAL
+========================================= */
+
+.hero-stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 680px;
+
+  background-color: var(--color-black);
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+/* =========================================
+   ENCABEZADO TRANSPARENTE
+========================================= */
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 20;
+
+  width: 100%;
+  height: 130px;
+
+  padding: 0 4%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+}
+
+.brand-logo {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+/* Menú centrado horizontalmente en la página */
+
+.nav-menu {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5vw;
+
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.nav-item {
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1.3rem, 1.8vw, 2.1rem);
+
+  color: var(--color-white);
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   FONDO: TEXTURA DE PARED
+========================================= */
+
+.hero-wall {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background-color: var(--color-black);
+
+  background-image: url("../assets/textura.jpg");
+
+  /* Evita el zoom y recorte agresivo de cover */
+  background-size: 100% 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Textura mucho más discreta */
+  opacity: 0.10;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   ILUMINACIÓN ROJIZA LATERAL
+========================================= */
+
+.hero-light-right {
+  position: absolute;
+
+  top: 0;
+  right: -20%;
+
+  width: 70%;
+  height: 100%;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse at 82% 42%,
+
+    rgba(248, 0, 79, 0.537) 0%,
+
+    rgba(248, 0, 79, 0.222) 38%,
+
+    rgba(13, 13, 13, 0) 72%
+  );
+}
+
+
+/* =========================================
+   SEPARACIÓN ENTRE PARED Y PISO
+========================================= */
+
+.hero-floor-line {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 24%;
+
+  height: 1px;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+
+    rgba(255, 245, 247, 0.02) 0%,
+
+    rgba(255, 245, 247, 0.17) 35%,
+
+    rgba(255, 245, 247, 0.10) 75%,
+
+    rgba(255, 245, 247, 0.02) 100%
+  );
+}
+
+
+/* =========================================
+   PISO OSCURO
+========================================= */
+
+.hero-floor {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 25%;
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+
+    rgba(255, 245, 247, 0.055) 0%,
+
+    rgba(13, 13, 13, 0.88) 30%,
+
+    var(--color-black) 100%
+  );
+}
+
+
+/* =========================================
+   DISTRIBUCIÓN DEL CONTENIDO
+========================================= */
+
+.hero-content {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BLOQUE DE TEXTOS
+========================================= */
+
+.hero-copy {
+
+  position: absolute;
+
+  /* Posición horizontal */
+  left: 10%;
+
+  /* Posición vertical */
+  top: 26%;
+
+  width: 520px;
+  max-width: 42vw;
+
+  padding: 0;
+
+  /* Todos los textos centrados entre sí */
+  text-align: center;
+
+  pointer-events: auto;
+}
+
+
+/* Título principal */
+
+.hero-title {
+
+  font-family: "UtilityDisplay", sans-serif;
+
+  font-size: clamp(18rem, 15vw, 18rem);
+
+  line-height: 0.86;
+
+  color: var(--color-white);
+
+  text-transform: uppercase;
+
+  letter-spacing: 0;
+
+  margin: 0;
+}
+
+
+/* Subtítulo */
+
+.hero-subtitle {
+
+  font-family: "UtilityDisplay", sans-serif;
+
+  font-size: clamp(4rem, 3.4vw, 4rem);
+
+  line-height: 0.95;
+
+  color: var(--color-accent);
+
+  text-transform: uppercase;
+
+  margin-top: -20px;
+
+  letter-spacing: 0;
+}
+
+
+/* Descripción */
+
+.hero-caption {
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1.1rem, 1.4vw, 1.65rem);
+
+  line-height: 1.3;
+
+  color: var(--color-white);
+
+  margin-top: 0px;
+
+  opacity: 0.96;
+}
+
+
+/* =========================================
+   IMAGEN DE LA PERSONA Y EL CUBO
+========================================= */
+
+.hero-art-wrap {
+
+  position: absolute;
+
+  /* Posicionamiento del lado derecho */
+  right: 10.5%;
+
+  bottom: 9%;
+
+  z-index: 10;
+
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  pointer-events: none;
+}
+
+
+.hero-art {
+
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  max-height: 65vh;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+
+/* =========================================
+   ADAPTACIÓN PARA PANTALLAS MEDIANAS
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .topbar {
+    height: 110px;
+  }
+
+  .brand-logo {
+    height: 42px;
+  }
+
+  .nav-menu {
+    gap: 3vw;
+  }
+
+  .hero-copy {
+    left: 9%;
+    top: 30%;
+    width: 440px;
+    max-width: 45vw;
+  }
+
+  .hero-title {
+    font-size: clamp(8rem, 15vw, 11rem);
+  }
+
+  .hero-art-wrap {
+    right: 5%;
+    width: 43%;
+  }
+
+  .hero-art {
+    max-height: 58vh;
+  }
+
+}
+
+
+/* =========================================
+   ADAPTACIÓN PARA MÓVILES
+========================================= */
+
+@media (max-width: 760px) {
+
+  .hero-stage {
+    min-height: 700px;
+  }
+
+  .topbar {
+    height: 65px;
+    padding: 18px 5%;
+
+    align-items: flex-start;
+  }
+
+  .brand-logo {
+    height: 35px;
+  }
+
+  .nav-menu {
+
+    top: auto;
+    bottom: 15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: 96%;
+
+    gap: clamp(20px, 3vw, 24px);
+  }
+
+  .nav-item {
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+  }
+
+  .hero-copy {
+
+    left: 50%;
+    top: 15%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 440px;
+
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(10rem, 20vw, 9rem);
+    
+  }
+
+  .hero-subtitle {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+
+  }
+
+  .hero-caption {
+    font-size: 1rem;
+  }
+
+  .hero-art-wrap {
+
+    right: 50%;
+    bottom: 15%;
+
+    transform: translateX(50%);
+
+    width: 85%;
+  }
+
+  .hero-art {
+    max-height: 39vh;
+  }
+
+}

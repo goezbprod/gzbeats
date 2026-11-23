@@ -1,0 +1,188 @@
+
+/* =========================================
+   BARRA DE NAVEGACIÓN GLOBAL
+========================================= */
+
+.topbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  width: 100%;
+  height: 130px;
+
+  padding: 0 4%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+}
+
+
+/* Logotipo */
+
+.brand-logo {
+  height: 72px;
+  width: auto;
+
+  display: block;
+
+  transition: filter 0.25s ease;
+}
+
+
+/* Navegación */
+
+.nav-menu {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5vw;
+
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+
+/* Enlaces */
+
+.nav-item {
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1.3rem, 1.8vw, 2.1rem);
+
+  color: var(--color-white);
+
+  letter-spacing: 0.2px;
+
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   MODO CLARO
+   Se activa al llegar a beat-promo
+========================================= */
+
+.topbar.topbar--light .nav-item {
+
+  color: var(--color-black);
+
+}
+
+
+/* Convertir logotipo blanco a negro */
+
+.topbar.topbar--light .brand-logo {
+
+  filter: brightness(0);
+
+}
+
+
+/* Hover sobre fondo claro */
+
+.topbar.topbar--light .nav-item:hover {
+
+  text-shadow:
+    0 0 12px rgba(13, 13, 13, 0.20);
+
+}
+
+
+/* Evitar que el hover original fuerce el
+   resplandor blanco sobre el logotipo negro */
+
+.topbar.topbar--light .brand-logo:hover {
+
+  filter: brightness(0) drop-shadow(
+    0 0 8px rgba(13, 13, 13, 0.20)
+  );
+
+}
+
+
+/* =========================================
+   PANTALLAS MEDIANAS
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .topbar {
+    height: 110px;
+  }
+
+  .brand-logo {
+    height: 42px;
+  }
+
+  .nav-menu {
+    gap: 3vw;
+  }
+
+}
+
+
+/* =========================================
+   MÓVILES
+========================================= */
+
+@media (max-width: 760px) {
+
+  .topbar {
+
+    height: 90px;
+
+    padding: 12px 5% 0;
+
+    align-items: flex-start;
+
+  }
+
+  .brand-logo {
+    height: 35px;
+  }
+
+  .nav-menu {
+
+    position: absolute;
+
+    top: auto;
+
+    bottom: 8px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: 96%;
+
+    gap: clamp(12px, 3vw, 22px);
+
+  }
+
+  .nav-item {
+
+    font-size: clamp(0.70rem, 2.8vw, 0.95rem);
+
+  }
+
+}

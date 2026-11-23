@@ -1,0 +1,528 @@
+
+/* =========================================
+   SECCIÓN PROMOCIONAL DE BEATS
+========================================= */
+
+.beat-promo {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  background-color: var(--color-white);
+  color: var(--color-black);
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+/* =========================================
+   DISTRIBUCIÓN PRINCIPAL
+========================================= */
+
+.beat-promo-inner {
+  position: relative;
+
+  width: 100%;
+  max-width: 1900px;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  padding: 130px 5% 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(0, 1fr);
+
+  grid-template-areas: "art copy";
+
+  align-items: stretch;
+
+  gap: 0;
+}
+
+
+/* =========================================
+   FOTOGRAFÍA PRINCIPAL
+========================================= */
+
+.promo-art {
+  grid-area: art;
+
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 0;
+
+  margin: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+
+.promo-art img {
+  display: block;
+
+  /* La fotografía utiliza su proporción original */
+  width: auto;
+  height: 100svh;
+
+  max-width: none;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  margin: 0;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+/* =========================================
+   BLOQUE DE TEXTO
+========================================= */
+
+.promo-content {
+  grid-area: copy;
+
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 900px;
+
+  align-self: center;
+  justify-self: start;
+
+  padding: 0 0 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+========================================= */
+
+.promo-title {
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+
+  margin: 0;
+
+  font-family: "UtilityDisplay", sans-serif;
+
+  /* Letras más grandes, sin comprimir */
+  font-size: clamp(6rem, 8.2vw, 10rem);
+
+  font-weight: normal;
+
+  line-height: 0.90;
+
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+
+  color: var(--color-black);
+}
+
+
+.promo-title span {
+  display: block;
+
+  white-space: nowrap;
+}
+
+
+.promo-title em {
+  font-style: normal;
+
+  color: var(--color-accent);
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.promo-description {
+  margin: 25px 0 0;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1.2rem, 1.65vw, 1.8rem);
+
+  line-height: 1.35;
+
+  color: var(--color-black);
+}
+
+
+/* =========================================
+   BOTÓN EXPLORAR BEATS
+========================================= */
+
+.promo-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 32px;
+
+  padding: 20px 40px;
+
+  border: 5px solid var(--color-accent);
+  border-radius: 100px;
+
+  background-color: var(--color-black);
+
+  color: var(--color-white);
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1.1rem, 1.5vw, 1.65rem);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.promo-button:hover {
+  transform: translateY(-4px);
+
+  background-color: var(--color-accent);
+
+  box-shadow:
+    0 12px 30px rgba(248, 0, 79, 0.22);
+}
+
+
+.promo-arrow {
+  color: var(--color-accent);
+
+  font-size: 1.8em;
+  line-height: 0.7;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.promo-button:hover .promo-arrow {
+  color: var(--color-white);
+
+  transform: translateX(7px);
+}
+
+
+/* =========================================
+   ONDA SONORA
+========================================= */
+
+.promo-wave {
+  width: 100%;
+  max-width: 700px;
+
+  margin-top: 42px;
+
+  pointer-events: none;
+}
+
+
+.promo-wave svg {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================================
+   PANTALLAS MEDIANAS
+========================================= */
+
+@media (min-width: 761px) and (max-width: 1100px) {
+
+  .beat-promo-inner {
+    padding-left: 3%;
+    padding-right: 3%;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.05fr);
+  }
+
+  .promo-art img {
+    height: 88svh;
+  }
+
+  .promo-title {
+    font-size: clamp(5rem, 8.5vw, 7.5rem);
+  }
+
+  .promo-description {
+    font-size: 1.25rem;
+  }
+
+  .promo-button {
+    padding: 16px 28px;
+  }
+
+  .promo-wave {
+    margin-top: 30px;
+  }
+}
+
+
+/* =========================================
+   MÓVILES
+========================================= */
+
+@media (max-width: 760px) {
+
+  .beat-promo {
+    min-height: 100svh;
+  }
+
+  .beat-promo-inner {
+    min-height: 100svh;
+
+    padding: 110px 23% 0;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    grid-template-rows:
+      auto
+      minmax(0, 1fr);
+
+    grid-template-areas:
+      "copy"
+      "art";
+
+    gap: 5px;
+  }
+
+
+  /* TEXTOS ARRIBA */
+
+  .promo-content {
+    width: 100%;
+    max-width: 560px;
+
+    padding: 0;
+
+    justify-self: center;
+    align-self: start;
+
+    text-align: center;
+  }
+
+
+  .promo-title {
+    width: 100%;
+
+    align-items: center;
+
+    font-size: clamp(6.5rem, 11vw, 5.2rem);
+
+    line-height: 0.72;
+
+    letter-spacing: 0;
+  }
+
+
+  .promo-title span {
+    white-space: nowrap;
+  }
+
+
+  .promo-description {
+    margin-top: 0px;
+
+    font-size: clamp(0.95rem, 3.8vw, 1.2rem);
+
+    line-height: 1.2;
+  }
+
+
+  .promo-button {
+    margin-top:10px;
+
+    padding: 13px 24px;
+
+    border-width: 3px;
+
+    gap: 36px;
+
+    font-size: 1.3rem;
+  }
+
+
+  .promo-wave {
+    max-width: 220px;
+
+    margin: 20px auto 0;
+  }
+
+
+  /* FOTOGRAFÍA CENTRADA ABAJO */
+
+  .promo-art {
+    width: 100%;
+    height: 150%;
+
+    min-height: 0;
+
+    align-self: end;
+
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+
+  .promo-art img {
+    width: auto;
+
+    height: auto;
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    margin: 0;
+  }
+
+}
+
+
+/* =========================================
+   MÓVILES PEQUEÑOS
+========================================= */
+
+@media (max-width: 380px) {
+
+  .beat-promo-inner {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .promo-title {
+    font-size: clamp(2.8rem, 10.8vw, 3.4rem);
+  }
+
+  .promo-button {
+    padding: 11px 18px;
+  }
+
+}
+
+/* =========================================
+   AJUSTE FINAL DE COMPOSICIÓN - ESCRITORIO
+========================================= */
+
+@media (min-width: 761px) {
+
+  /* BLOQUE DE TEXTO */
+  .promo-content {
+
+    width: 100%;
+    max-width: 100%;
+
+    align-self: center;
+
+    /* Baja el conjunto para separarlo del menú */
+    transform: translateY(55px);
+
+  }
+
+
+  /* TÍTULO PRINCIPAL */
+  .promo-title {
+
+    font-size: clamp(8rem, 12vw, 14rem);
+
+    /* Acercar las dos líneas */
+    line-height: 0.76;
+
+    letter-spacing: 0;
+
+    width: max-content;
+    max-width: 100%;
+
+    margin: 0;
+
+  }
+
+
+  .promo-title span {
+
+    display: block;
+
+    white-space: nowrap;
+
+  }
+
+
+  /* DESCRIPCIÓN */
+  .promo-description {
+
+    margin-top: 16px;
+
+    font-size: clamp(1.3rem, 1.7vw, 1.8rem);
+
+    line-height: 1.25;
+
+  }
+
+
+  /* BOTÓN */
+  .promo-button {
+
+    margin-top: 24px;
+
+  }
+
+
+  /* ONDA SONORA */
+  .promo-wave {
+
+    margin-top: 28px;
+
+  }
+
+}

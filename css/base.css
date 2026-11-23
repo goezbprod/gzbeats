@@ -1,0 +1,80 @@
+:root {
+  --color-white: #fff5f7;
+  --color-black: #0d0d0d;
+  --color-accent: #f8004f;
+  --color-shadow-pure: #000000;
+}
+
+@font-face {
+  font-family: "UtilityDisplay";
+  src: url("../fonts/UTILITY.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CalSansCustom";
+  src: url("../fonts/CalSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: "CalSansCustom", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Resplandor al pasar el cursor según el color del elemento */
+.glow-white {
+  transition: text-shadow 0.25s ease, filter 0.25s ease, color 0.25s ease;
+}
+
+.glow-white:hover {
+  text-shadow: 0 0 18px rgba(255, 245, 247, 0.45);
+}
+
+img.glow-white:hover {
+  filter: drop-shadow(0 0 12px rgba(255, 245, 247, 0.45));
+}
+
+.glow-accent {
+  transition: text-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.glow-accent:hover {
+  text-shadow: 0 0 20px rgba(248, 0, 79, 0.65);
+}
+
+/* Control básico de vistas / apartados */
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+.placeholder-view {
+  min-height: 100vh;
+  background-color: var(--color-black);
+}

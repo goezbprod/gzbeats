@@ -1,0 +1,1268 @@
+
+/* =========================================
+   MODAL DE DETALLES
+========================================= */
+
+.beat-details-dialog {
+
+  position: fixed;
+
+  inset: 0;
+
+  width: min(1120px, calc(100vw - 36px));
+
+  max-width: none;
+
+  max-height: min(850px, 90dvh);
+
+  margin: auto;
+
+  padding: 0;
+
+  overflow: auto;
+
+  border: 1px solid rgba(255,255,255,0.16);
+
+  border-radius: 22px;
+
+  background: #151515;
+
+  color: var(--beats-white);
+
+  isolation: isolate;
+
+  box-shadow: 0 30px 100px rgba(0,0,0,0.75);
+
+}
+
+
+/* Fondo desenfocado a partir de la portada */
+
+.beat-details-dialog::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: -35px;
+
+  z-index: -2;
+
+  background-image: var(--dialog-cover);
+
+  background-position: center;
+
+  background-size: cover;
+
+  filter: blur(35px) brightness(0.16) saturate(0.65);
+
+  opacity: 0.85;
+
+  transform: scale(1.08);
+
+  pointer-events: none;
+
+}
+
+
+.beat-details-dialog::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background: rgba(13,13,13,0.69);
+
+  pointer-events: none;
+
+}
+
+
+.beat-details-dialog[open] {
+
+  animation: beat-dialog-enter 0.24s ease both;
+
+}
+
+
+@keyframes beat-dialog-enter {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(12px) scale(0.985);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+
+  }
+
+}
+
+
+.beat-details-dialog::backdrop {
+
+  background: rgba(0,0,0,0.82);
+
+  backdrop-filter: blur(8px);
+
+}
+
+
+/* =========================================
+   CONTENEDOR INTERIOR
+========================================= */
+
+.beat-dialog-shell {
+
+  position: relative;
+
+  padding: 34px;
+
+  min-height: 100%;
+
+  box-sizing: border-box;
+
+}
+
+
+/* Botón cerrar */
+
+.beat-dialog-close {
+
+  position: absolute;
+
+  top: 17px;
+
+  right: 20px;
+
+  z-index: 20;
+
+  width: 38px;
+
+  height: 38px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  border-radius: 50%;
+
+  background: rgba(0,0,0,0.30);
+
+  color: white;
+
+  font-size: 1.7rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+
+.beat-dialog-close:hover {
+
+  background: var(--beats-pink);
+
+  transform: rotate(90deg);
+
+}
+
+
+/* =========================================
+   DISTRIBUCIÓN EN TRES ZONAS
+========================================= */
+
+.beat-details-layout {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.7fr)
+    minmax(245px, 0.78fr);
+
+  grid-template-rows: auto auto;
+
+  grid-template-areas:
+
+    "overview sidebar"
+    "licenses sidebar";
+
+  gap: 25px;
+
+  padding-top: 10px;
+
+}
+
+
+/* =========================================
+   SUPERIOR IZQUIERDA
+   PORTADA + INFORMACIÓN
+========================================= */
+
+.details-overview {
+
+  grid-area: overview;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns: minmax(145px, 0.75fr) minmax(0, 1.25fr);
+
+  gap: 25px;
+
+  align-items: center;
+
+  padding: 12px;
+
+  border: 1px solid rgba(255,255,255,0.11);
+
+  border-radius: 17px;
+
+  background: rgba(255,255,255,0.045);
+
+}
+
+
+.details-cover-wrap {
+
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #222;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+}
+
+
+.details-cover {
+
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+}
+
+
+.details-information {
+
+  min-width: 0;
+
+}
+
+
+.dialog-overline {
+
+  margin-bottom: 12px;
+
+  color: var(--beats-pink);
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 2px;
+
+}
+
+
+.details-information h2 {
+
+  margin: 0;
+
+  font-family: "UtilityDisplay", sans-serif;
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+  line-height: 0.95;
+
+  overflow-wrap: anywhere;
+
+  color: var(--beats-white);
+
+}
+
+
+.details-meta {
+
+  margin-top: 12px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 1rem;
+
+  color: rgba(255,255,255,0.72);
+
+}
+
+
+.details-status {
+
+  display: inline-block;
+
+  margin-top: 16px;
+
+  padding: 7px 11px;
+
+  border-radius: 30px;
+
+  background: rgba(248,0,79,0.12);
+
+  color: #ff6090;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: bold;
+
+  letter-spacing: 0.5px;
+
+}
+
+
+.details-description {
+
+  max-width: 390px;
+
+  margin-top: 14px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+
+  color: rgba(255,255,255,0.63);
+
+}
+
+
+/* =========================================
+   ZONA DERECHA
+========================================= */
+
+.details-sidebar {
+
+  grid-area: sidebar;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  min-width: 0;
+
+}
+
+
+/* Panel reproductor */
+
+.dialog-player-panel {
+
+  padding: 22px;
+
+  border: 1px solid rgba(255,255,255,0.14);
+
+  border-radius: 16px;
+
+  background: rgba(10,10,10,0.40);
+
+  backdrop-filter: blur(12px);
+
+  text-align: center;
+
+}
+
+
+.side-overline {
+
+  color: var(--beats-pink);
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.69rem;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+.dialog-player-panel h3,
+.discount-panel h3 {
+
+  margin-top: 9px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+
+  color: white;
+
+}
+
+
+/* Botón de reproducción */
+
+.modal-play-button {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 65px;
+
+  height: 65px;
+
+  margin: 20px auto 13px;
+
+  border: 2px solid rgba(255,255,255,0.35);
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.09);
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+
+}
+
+
+.modal-play-button:hover {
+
+  transform: scale(1.08);
+
+  background: var(--beats-pink);
+
+}
+
+
+.modal-play-button:disabled {
+
+  opacity: 0.35;
+
+  cursor: not-allowed;
+
+}
+
+
+/* Barra de reproducción */
+
+.modal-preview-controls {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+}
+
+
+.modal-preview-controls input {
+
+  width: 100%;
+
+  min-width: 0;
+
+  accent-color: var(--beats-pink);
+
+  cursor: pointer;
+
+}
+
+
+.modal-preview-controls span {
+
+  flex-shrink: 0;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.68rem;
+
+  color: rgba(255,255,255,0.72);
+
+}
+
+
+.preview-note {
+
+  margin-top: 13px;
+
+  font-size: 0.72rem;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  color: rgba(255,255,255,0.48);
+
+}
+
+
+/* =========================================
+   CÓDIGO DE DESCUENTO
+========================================= */
+
+.discount-panel {
+
+  padding: 20px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.045);
+
+}
+
+
+.discount-panel > p:not(.side-overline) {
+
+  margin-top: 9px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.75rem;
+
+  line-height: 1.4;
+
+  color: rgba(255,255,255,0.57);
+
+}
+
+
+.discount-controls {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin-top: 16px;
+
+}
+
+
+.discount-controls input {
+
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: rgba(0,0,0,0.35);
+
+  color: white;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.85rem;
+
+}
+
+
+.discount-controls input:focus {
+
+  border-color: var(--beats-pink);
+
+}
+
+
+.discount-controls button {
+
+  padding: 11px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: var(--beats-pink);
+
+  color: white;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+
+.discount-controls button:disabled {
+
+  background: #454545;
+
+  color: #888;
+
+  cursor: not-allowed;
+
+}
+
+
+.discount-status {
+
+  min-height: 16px;
+
+  margin-top: 11px;
+
+  font-size: 0.68rem;
+
+  color: rgba(255,255,255,0.50);
+
+}
+
+
+/* =========================================
+   LICENCIAS INFERIORES
+========================================= */
+
+.details-licenses {
+
+  grid-area: licenses;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 17px;
+
+  min-width: 0;
+
+}
+
+
+/* Tarjetas */
+
+.license-card {
+
+  position: relative;
+
+  min-width: 0;
+
+  padding: 23px 20px;
+
+  border: 1px solid rgba(255,255,255,0.14);
+
+  border-radius: 15px;
+
+  background: rgba(22,22,22,0.72);
+
+  display: flex;
+
+  flex-direction: column;
+
+  backdrop-filter: blur(10px);
+
+}
+
+
+.basic-license {
+
+  border-color: rgba(255,255,255,0.15);
+
+}
+
+
+.pro-license {
+
+  border-color: var(--beats-pink);
+
+  background: rgba(60,20,37,0.44);
+
+}
+
+
+/* Etiqueta recomendada */
+
+.license-recommended {
+
+  position: absolute;
+
+  top: -12px;
+
+  right: 15px;
+
+  padding: 6px 12px;
+
+  border-radius: 30px;
+
+  background: var(--beats-pink);
+
+  color: white;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.63rem;
+
+  font-weight: bold;
+
+  letter-spacing: 0.6px;
+
+}
+
+
+/* Encabezados */
+
+.license-overline {
+
+  margin-bottom: 7px;
+
+  color: rgba(255,255,255,0.49);
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 1.2px;
+
+}
+
+
+.license-heading h3 {
+
+  margin: 0;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+
+  line-height: 1.3;
+
+  color: white;
+
+}
+
+
+/* Precios */
+
+.license-price {
+
+  margin-top: 15px;
+
+  margin-bottom: 18px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: clamp(1.45rem, 2vw, 2rem);
+
+  line-height: 1;
+
+  color: #52d98a;
+
+  overflow-wrap: anywhere;
+
+}
+
+
+/* Características */
+
+.license-includes {
+
+  display: grid;
+
+  gap: 11px;
+
+  margin: 0 0 25px;
+
+  padding: 0;
+
+  list-style: none;
+
+}
+
+
+.license-includes li {
+
+  position: relative;
+
+  padding-left: 22px;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.84rem;
+
+  line-height: 1.35;
+
+  color: rgba(255,255,255,0.82);
+
+}
+
+
+.license-includes li::before {
+
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  color: var(--beats-pink);
+
+  font-weight: bold;
+
+}
+
+
+/* =========================================
+   BOTONES DE CADA LICENCIA
+========================================= */
+
+.license-actions {
+
+  display: flex;
+
+  align-items: stretch;
+
+  gap: 9px;
+
+  margin-top: auto;
+
+}
+
+
+.license-whatsapp {
+
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  padding: 12px 13px;
+
+  border-radius: 9px;
+
+  background: #303030;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 0.78rem;
+
+  font-weight: bold;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+
+.basic-license .license-whatsapp:hover {
+
+  background: #424242;
+
+}
+
+
+.pro-license .license-whatsapp {
+
+  background: var(--beats-pink);
+
+}
+
+
+.pro-license .license-whatsapp:hover {
+
+  background: #dc0045;
+
+}
+
+
+.license-whatsapp:hover {
+
+  transform: translateY(-2px);
+
+}
+
+
+/* Botón individual para descargar ticket */
+
+.license-download {
+
+  flex: 0 0 43px;
+
+  width: 43px;
+  min-width: 43px;
+
+  border: 1px solid rgba(255,255,255,0.22);
+
+  border-radius: 9px;
+
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-family: "CalSansCustom", sans-serif;
+
+  font-size: 1.45rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+}
+
+
+.license-download:hover {
+
+  background: rgba(255,255,255,0.18);
+
+  border-color: var(--beats-pink);
+
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLETAS
+========================================= */
+
+@media (max-width: 850px) {
+
+  .beat-details-dialog {
+
+    max-height: 91dvh;
+
+  }
+
+  .beat-dialog-shell {
+
+    padding: 26px 20px;
+
+  }
+
+  .beat-details-layout {
+
+    grid-template-columns:
+      minmax(0, 1.3fr)
+      minmax(210px, 0.8fr);
+
+    gap: 15px;
+
+  }
+
+  .details-overview {
+
+    grid-template-columns: 120px minmax(0, 1fr);
+
+    gap: 14px;
+
+  }
+
+  .details-description {
+
+    display: none;
+
+  }
+
+  .license-card {
+
+    padding: 18px 14px;
+
+  }
+
+  .license-whatsapp {
+
+    font-size: 0.71rem;
+
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MÓVILES
+========================================= */
+
+@media (max-width: 650px) {
+
+  .beat-details-dialog {
+
+    width: calc(100vw - 20px);
+
+    max-height: 92dvh;
+
+    border-radius: 16px;
+
+  }
+
+  .beat-dialog-shell {
+
+    padding: 54px 14px 18px;
+
+  }
+
+  .beat-dialog-close {
+
+    top: 10px;
+
+    right: 12px;
+
+  }
+
+  .beat-details-layout {
+
+    grid-template-columns: minmax(0, 1fr);
+
+    grid-template-rows: auto auto auto;
+
+    grid-template-areas:
+
+      "overview"
+      "sidebar"
+      "licenses";
+
+    gap: 14px;
+
+    padding-top: 0;
+
+  }
+
+
+  /* Portada e información en una fila */
+
+  .details-overview {
+
+    grid-template-columns: 112px minmax(0, 1fr);
+
+    gap: 13px;
+
+    padding: 10px;
+
+  }
+
+  .details-information h2 {
+
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+
+  }
+
+  .details-meta {
+
+    margin-top: 7px;
+
+    font-size: 0.82rem;
+
+  }
+
+  .dialog-overline {
+
+    margin-bottom: 7px;
+
+    font-size: 0.63rem;
+
+  }
+
+  .details-status {
+
+    margin-top: 9px;
+
+    padding: 5px 8px;
+
+    font-size: 0.57rem;
+
+  }
+
+
+  /* Panel lateral en disposición compacta */
+
+  .details-sidebar {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+  }
+
+  .dialog-player-panel,
+  .discount-panel {
+
+    padding: 13px;
+
+  }
+
+  .dialog-player-panel h3,
+  .discount-panel h3 {
+
+    font-size: 0.89rem;
+
+  }
+
+  .modal-play-button {
+
+    width: 48px;
+    height: 48px;
+
+    margin: 12px auto;
+
+  }
+
+  .preview-note {
+
+    display: none;
+
+  }
+
+  .discount-controls input,
+  .discount-controls button {
+
+    padding: 9px;
+
+    font-size: 0.73rem;
+
+  }
+
+
+  /* Licencias */
+
+  .details-licenses {
+
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+  }
+
+  .license-card {
+
+    padding: 20px 15px;
+
+  }
+
+  .license-price {
+
+    font-size: 1.65rem;
+
+  }
+
+  .license-includes {
+
+    gap: 8px;
+
+    margin-bottom: 17px;
+
+  }
+
+  .license-includes li {
+
+    font-size: 0.81rem;
+
+  }
+
+}
+
+
+@media (max-width: 390px) {
+
+  .details-sidebar {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .details-cover-wrap {
+
+    max-width: 105px;
+
+  }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .beat-details-dialog[open] {
+
+    animation: none;
+
+  }
+
+}
+
+
+/* Capas del fondo dinámico del modal */
+
+.beat-details-dialog {
+  background: transparent;
+}
+
+.beat-details-dialog::before {
+  z-index: 0;
+  inset: -35px;
+}
+
+.beat-details-dialog::after {
+  z-index: 1;
+}
+
+.beat-dialog-shell {
+  position: relative;
+  z-index: 2;
+}
