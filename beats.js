@@ -69,7 +69,7 @@ const misBeats = [
     archivo: "audios/r66.mp3",
     vendido: false,
     tipo: "",
-    estado: "si",
+    estado: "no",
     img: "https://i.pinimg.com/736x/76/31/25/763125b40635d0cec6c12eb9d0e55271.jpg"
   },
 
@@ -83,7 +83,7 @@ const misBeats = [
     archivo: "audios/t3.mp3",
     vendido: false,
     tipo: "",
-    estado: "si",
+    estado: "no",
     img: "https://i.pinimg.com/236x/90/f3/28/90f3281956d774d19f9ea9c193c8c453.jpg?nii=t"
   },
 
@@ -111,7 +111,7 @@ const misBeats = [
     archivo: "audios/g4.mp3",
     vendido: false,
     tipo: "",
-    estado: "si",
+    estado: "no",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxaK19ir8n-OrkxtdjgOwZP-4rJNQHoyj84ggEPkzQDsgY1OLZW2xpzZRc&s=10"
   },
 
@@ -134,7 +134,7 @@ const misBeats = [
     titulo: "Bellakeo Type",
     genre: "Reggaeton",
     bpm: 90,
-    precioBasico: "$16 USD ($290MXN)",
+    precioBasico: "$11 USD ($220MXN)",
     precioPro: "$27 USD ($490 MXN)",
     archivo: "audios/r39.mp3",
     vendido: false,
@@ -190,7 +190,7 @@ const misBeats = [
     titulo: "Traiciones Type CrMJ",
     genre: "Reggaeton",
     bpm: 95,
-    precioBasico: "$18 USD ($330MXN)",
+    precioBasico: "$15 USD ($310MXN)",
     precioPro: "$22 USD ($400 MXN)",
     archivo: "audios/r70.mp3",
     vendido: false,
@@ -204,7 +204,7 @@ const misBeats = [
     titulo: "Viejos tiempos",
     genre: "Reggaeton",
     bpm: 86,
-    precioBasico: "$16 USD ($290MXN)",
+    precioBasico: "$13 USD ($260MXN)",
     precioPro: "$27 USD ($490 MXN)",
     archivo: "audios/r88.mp3",
     vendido: false,
@@ -218,7 +218,7 @@ const misBeats = [
     titulo: "Triste Type FyMn",
     genre: "Reggaeton",
     bpm: 95,
-    precioBasico: "$18 USD ($330MXN)",
+    precioBasico: "$14 USD ($280MXN)",
     precioPro: "$22 USD ($400 MXN)",
     archivo: "audios/r85cat.mp3",
     vendido: false,
@@ -232,7 +232,7 @@ const misBeats = [
     titulo: "Obsesionado Old",
     genre: "Reggaeton",
     bpm: 88,
-    precioBasico: "$21 USD ($380MXN)",
+    precioBasico: "$14 USD ($280MXN)",
     precioPro: "$24 USD ($450 MXN)",
     archivo: "audios/r91.mp3",
     vendido: false,
@@ -274,7 +274,7 @@ const misBeats = [
     titulo: "Apretado",
     genre: "Reggaeton",
     bpm: 96,
-    precioBasico: "$17 USD ($320MXN)",
+    precioBasico: "$11 USD ($220MXN)",
     precioPro: "$22 USD ($400 MXN)",
     archivo: "audios/r93.mp3",
     vendido: false,
@@ -302,7 +302,7 @@ const misBeats = [
     titulo: "Secretos",
     genre: "Reggaeton",
     bpm: 94,
-    precioBasico: "$14 USD ($280MXN)",
+    precioBasico: "$12 USD ($240MXN)",
     precioPro: "$17 USD ($320 MXN)",
     archivo: "audios/r95.mp3",
     vendido: false,
@@ -320,7 +320,7 @@ const misBeats = [
     precioPro: "$12 USD ($240 MXN)",
     archivo: "audios/r96.mp3",
     vendido: false,
-    tipo: "reciente",
+    tipo: "",
     estado: "si",
     img: "https://i.pinimg.com/originals/51/17/2d/51172d35896202663a8cf24b786fdddc.jpg"
   }
@@ -371,6 +371,52 @@ const misBeats = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZNqbvgKTfdJH23D1qAKMNW9l3g2vgyeD-XjtQQvYPXzYgMwRKireQMO9V&s=10"
   }
 
-  
+    ,
+
+  {
+    id: 27,
+    titulo: "Tentación",
+    genre: "Reggaeton",
+    bpm: 94,
+    precioBasico: "$11 USD ( $220MXN )",
+    precioPro: "$17 USD ($320 MXN)",
+    archivo: "audios/r101.mp3",
+    vendido: false,
+    tipo: "reciente",
+    estado: "si",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpDz7AX_mWZNWvKpNstu6lyJ8ylvXO7hPOaT9gIr4e0cG2OxR8thBuXY&s=10"
+  }
+
+
+    ,
+
+  {
+    id: 28,
+    titulo: "Tirote0",
+    genre: "Reggaeton",
+    bpm: 90,
+    precioBasico: "$11 USD ( $220MXN )",
+    precioPro: "$14 USD (270 MXN)",
+    archivo: "audios/r102.mp3",
+    vendido: false,
+    tipo: "",
+    estado: "si",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyHprTuujayIcbPZVB_lUru2xY-l7M1vc46Nv36EsrZHRQ66KjyltjZdiT&s=10"
+  }
+    ,
+
+  {
+    id: 29,
+    titulo: "En la calle",
+    genre: "Reggaeton",
+    bpm: 95,
+    precioBasico: "$9 USD ( $190MXN )",
+    precioPro: "$11 USD (220 MXN)",
+    archivo: "audios/r103.mp3",
+    vendido: false,
+    tipo: "",
+    estado: "si",
+    img: "https://images.pexels.com/photos/10529735/pexels-photo-10529735.jpeg?cs=srgb&dl=pexels-marlon-alves-2016519-10529735.jpg&fm=jpg"
+  }
 
 ];
