@@ -419,4 +419,97 @@ const misBeats = [
     img: "https://images.pexels.com/photos/10529735/pexels-photo-10529735.jpeg?cs=srgb&dl=pexels-marlon-alves-2016519-10529735.jpg&fm=jpg"
   }
 
+      ,
+
+  {
+    id: 30,
+    titulo: "Atardecer",
+    genre: "Reggaeton",
+    bpm: 92,
+    precioBasico: "$11 USD ( $220MXN )",
+    precioPro: "$14 USD (270 MXN)",
+    archivo: "audios/r104.mp3",
+    vendido: false,
+    tipo: "",
+    estado: "si",
+    img: "https://i.pinimg.com/1200x/58/19/d2/5819d2ed10ee0f8142341f08aa928cd3.jpg"
+  }
+
+      ,
+
+  {
+    id: 31,
+    titulo: "Entre todas",
+    genre: "Reggaeton",
+    bpm: 94,
+    precioBasico: "$14 USD ( $260MXN )",
+    precioPro: "$17 USD (320 MXN)",
+    archivo: "audios/r105.mp3",
+    vendido: false,
+    tipo: "reciente",
+    estado: "si",
+    img: "https://i.pinimg.com/236x/66/9e/e6/669ee6d8167a4ee3b945d5a37e16b41c.jpg"
+  }
+      ,
+
+  {
+    id: 32,
+    titulo: "Confesión",
+    genre: "Reggaeton",
+    bpm: 91,
+    precioBasico: "$13 USD ( $240MXN )",
+    precioPro: "$17 USD (320 MXN)",
+    archivo: "audios/r106.mp3",
+    vendido: false,
+    tipo: "reciente",
+    estado: "si",
+    img: "https://i.pinimg.com/736x/a0/a8/48/a0a8481c0e5c3833f21921f69cd5613e.jpg"
+  }
+
+        ,
+
+  {
+    id: 33,
+    titulo: "No Vuelvas",
+    genre: "Reggaeton",
+    bpm: 94,
+    precioBasico: "$11 USD ( $220MXN )",
+    precioPro: "$14 USD (270 MXN)",
+    archivo: "audios/vuelvas.mp3",
+    vendido: false,
+    tipo: "",
+    estado: "si",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD76gOmISD6fPs2Uk3lylVorLtqBdx7TLtLYBJ5daQQKLltafOg0o0gtY&s=10"
+  }
+        ,
+
+  {
+    id: 34,
+    titulo: "Escondidos",
+    genre: "Reggaeton",
+    bpm: 95,
+    precioBasico: "$13 USD ( $240MXN )",
+    precioPro: "$17 USD (320 MXN)",
+    archivo: "audios/escondidos.mp3",
+    vendido: false,
+    tipo: "mejor",
+    estado: "si",
+    img: "https://i.pinimg.com/736x/8c/05/e0/8c05e09cfde8d99321e6660a4e82d0b8.jpg"
+  }
+        ,
+
+  {
+    id: 35,
+    titulo: "En la noche",
+    genre: "Reggaeton",
+    bpm: 90,
+    precioBasico: "$11 USD ( $190MXN )",
+    precioPro: "$15 USD (280 MXN)",
+    archivo: "audios/noche.mp3",
+    vendido: false,
+    tipo: "",
+    estado: "si",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqFf1eMVB-vJZHkPj--x1dUKviCs2HxuQR1io0FBW9BejFDDyi0nAovWM&s=10"
+  }
+
 ];
